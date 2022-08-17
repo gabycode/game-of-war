@@ -10,11 +10,23 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 460px;
     margin: 0 auto;
     background-color: #fff;
 }
 
 button {
     font-family: 'Poppins', sans-serif;
+}
+
+#cards {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card-slot {
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 120px;
+    width: calc(120px * 5 / 7);
 }
