@@ -13,11 +13,21 @@ body {
     max-width: 460px;
     margin: 0 auto;
     background-color: #fff;
+    text-align: center;
 }
 
-button {
-    font-family: 'Poppins', sans-serif;
+/* //////////////
+    INSTRUCTIONS
+////////////////// */
+
+.instr {
+    font-size: 0.9rem;
 }
+
+
+/* //////////////
+    CARDS
+////////////////// */
 
 #cards {
     display: flex;
@@ -29,4 +39,23 @@ button {
     border-radius: 5px;
     height: 120px;
     width: calc(120px * 5 / 7);
+}
+
+/* //////////////
+    BUTTONS
+////////////////// */
+
+.buttons {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* //////////////
+    SCORE
+////////////////// */
+
+.score {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 0.9rem;
 }
