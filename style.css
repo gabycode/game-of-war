@@ -22,6 +22,11 @@ body {
 
 .instr {
     font-size: 0.9rem;
+    margin-bottom: 2em;
+}
+
+.instructions {
+    margin: .5em;
 }
 
 
@@ -45,8 +50,20 @@ body {
     BUTTONS
 ////////////////// */
 
-.buttons {
+button {
     font-family: 'Poppins', sans-serif;
+    margin: 0 1em;
+    padding: .5em 1em;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1em 0;
 }
 
 
