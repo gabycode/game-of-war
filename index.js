@@ -1,5 +1,5 @@
 const newDeckBtn = document.getElementById("new-deck-btn")
 
-newDeckBtn.addEventListener("click", e => {
+newDeckBtn.addEventListener("click", () => {
     console.log("button click")
 })
