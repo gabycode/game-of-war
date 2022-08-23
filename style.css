@@ -53,10 +53,28 @@ body {
 button {
     font-family: 'Poppins', sans-serif;
     margin: 0 1em;
-    padding: .5em 1em;
-    border-radius: 20px;
     border: none;
     cursor: pointer;
+    border-radius: 20px;
+    padding: .7em 1em;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+#new-deck-btn:hover {
+    background-color: #dfdfdf;
+}
+
+#draw-cards {
+    background-color: transparent;
+    border: 1px solid #dfdfdf;
+    color: rgb(80, 80, 80);
+    transition: 0.3s;
+}
+
+#draw-cards:hover {
+    background-color: #dfdfdf;
+    color: black;
 }
 
 .buttons {
