@@ -46,6 +46,15 @@ body {
     width: calc(120px * 5 / 7);
 }
 
+.card {
+    height: 100%;
+    width: 100%;
+}
+
+#remaining {
+    padding: 1em;
+}
+
 /* //////////////
     BUTTONS
 ////////////////// */
@@ -59,6 +68,13 @@ button {
     padding: .7em 1em;
     transition: 0.3s;
     font-weight: 600;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1em;
 }
 
 #new-deck-btn:hover {
@@ -77,12 +93,7 @@ button {
     color: black;
 }
 
-.buttons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1em 0;
-}
+
 
 
 /* //////////////
