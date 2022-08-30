@@ -28,7 +28,7 @@ drawCardsBtn.addEventListener("click", () => {
             cardsContainer.children[1].innerHTML = `<img src=${data.cards[1].image} class="card">`
 
 
-            if(drawCardsBtn === 0) {
+            if(data.remaining === 0) {
                 drawCardsBtn.disabled = true
             }
         })
