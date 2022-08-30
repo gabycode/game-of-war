@@ -5,6 +5,7 @@ const remainingText = document.getElementById("remaining")
 const cardsContainer = document.getElementById("cards")
 const myScore = document.getElementById("my-score")
 const computerScore = document.getElementById("computer-score")
+const header = document.getElementById("header")
 
 newDeckBtn.addEventListener("click", handleClick)
 
@@ -27,21 +28,24 @@ drawCardsBtn.addEventListener("click", () => {
             cardsContainer.children[0].innerHTML = `<img src=${data.cards[0].image} class="card">`
             cardsContainer.children[1].innerHTML = `<img src=${data.cards[1].image} class="card">`
 
-
+            // const winnerText = determineCardWinner(data.cards[0], data.cards[1])
+            // header.textContent = winnerText
+            
             if(data.remaining === 0) {
                 drawCardsBtn.disabled = true
+                console.log("no more cards")
             }
         })
 })
 
-function determineCardWinner(card1, card2) {
-    const valueOptions = ["2", "3", "4", "5", "6", "7", "8", "9", 
-    "10", "JACK", "QUEEN", "KING", "ACE"]
-    const card1ValueIndex = valueOptions.indexOf(card1.value)
-    const card2ValueIndex = valueOptions.indexOf(card2.value)
-    console.log(card1ValueIndex)
-    console.log(card2ValueIndex)
-    // if(card1ValueIndex > card2ValueIndex) {
+// function determineCardWinner(card1, card2) {
+//     const valueOptions = ["2", "3", "4", "5", "6", "7", "8", "9", 
+//     "10", "JACK", "QUEEN", "KING", "ACE"]
+//     const card1ValueIndex = valueOptions.indexOf(card1.value)
+//     const card2ValueIndex = valueOptions.indexOf(card2.value)
+//     // console.log(card1ValueIndex)
+//     // console.log(card2ValueIndex)
+//     // if(card1ValueIndex > card2ValueIndex) {
         
-    // }
-}
+//     // }
+// }
