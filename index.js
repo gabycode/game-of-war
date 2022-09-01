@@ -3,6 +3,7 @@ let computerScore = 0
 let myScore = 0
 const newDeckBtn = document.getElementById("new-deck-btn")
 const drawCardsBtn = document.getElementById("draw-cards")
+const restartGameBtn = document.getElementById("restart-game")
 const remainingText = document.getElementById("remaining")
 const cardsContainer = document.getElementById("cards")
 const myScoreEl = document.getElementById("my-score")
@@ -37,20 +38,19 @@ drawCardsBtn.addEventListener("click", () => {
             header.textContent = winnerText
             
             if(data.remaining === 0) {
-                    drawCardsBtn.disabled = true
-                    console.log("no more cards")
+                    restartGame()
                 if(computerScore > myScore) {
-                    header.textContent = `Computer is the final winner`
-                    instr.textContent = ` `
-                    cards.textContent = ` `
+                    header.textContent = `Computer is the final winner!`
+                    instr.style.display = "none"
+                    cards.style.visibility = "hidden"
                 } else if (computerScore < myScore) {
-                    header.textContent = `You are the final winner`
-                    instr.textContent = ` `
-                    cards.textContent = ` `
+                    header.textContent = `You are the final winner!`
+                    instr.style.display = "none"
+                    cards.style.visibility = "hidden"
                 } else {
                     header.textContent = `It's a tie!`
-                    instr.textContent = ` `
-                    cards.textContent = ` `
+                    instr.style.display = "none"
+                    cards.style.visibility = "hidden"
                 }
             }
         })
@@ -74,3 +74,24 @@ function determineCardWinner(card1, card2) {
         return "War!"
     }
 }
+
+function restartGame() {
+    newDeckBtn.style.display = "none"
+    drawCardsBtn.style.display = "none"
+    restartGameBtn.style.display = "block"
+    drawCardsBtn.disabled = false
+}
+
+restartGameBtn.addEventListener("click", () => {
+    newDeckBtn.style.display = "block"
+    drawCardsBtn.style.display = "block"
+    restartGameBtn.style.display = "none"
+    instr.style.display = "block"
+    cards.style.visibility = "visible"
+
+    computerScore = 0
+    myScore = 0
+
+    computerScoreEl.textContent = `Computer Score: ${computerScore}`
+    myScoreEl.textContent = `My Score: ${myScore}`
+})
