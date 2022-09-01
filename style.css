@@ -95,7 +95,16 @@ button {
     color: black;
 }
 
+.restart {
+    display: none;
+    background-color: #FF3352;
+    color: white;
+    transition: 0.3s;
+}
 
+.restart:hover {
+    background-color: #E60022;
+}
 
 
 /* //////////////
