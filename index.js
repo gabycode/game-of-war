@@ -94,4 +94,5 @@ restartGameBtn.addEventListener("click", () => {
 
     computerScoreEl.textContent = `Computer Score: ${computerScore}`
     myScoreEl.textContent = `My Score: ${myScore}`
+    header.textContent = "Game of War"
 })
